@@ -5,8 +5,18 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+/* Box (for corners & padding) */
+.box {
+    padding-left: 20px;
+    /* border-radius: 10px; */
+    background-color: #ddd;
+}
 
-/* ---- Set up site grid ---- */
+
+/* Set up grids... specifics */
+
+/*  #### Grid for Main page #### */
+
 
 .wrapper {
     display: grid;
@@ -20,31 +30,17 @@ body {
     
 }
 
-/* ---- End of grid setup for main pages ---- */
-
-
-/* -000- Area styling -000- */
-
-.box {
-    padding-left: 20px;
-    /* border-radius: 10px; */
-    background-color: #ddd;
+@media only screen and (max-width: 1100px) {
+    .wrapper{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "banner"
+        "nav"
+        "main"
+        "footer";
+    }
 }
-
-/* Area colouring... */
-
-/* logo, banner and footer background are the same */
-.logo, .banner, .footer {
-    background-color: #888;  /* dark grey */
-}
-
-/* Set font on dark areas to white */
-.logo, .banner, .side, .footer {
-    color: #fff;
-}
-
-/* Area specifics */
-
 
 .banner {
     grid-area: banner;
@@ -61,7 +57,7 @@ body {
 
 .main {
     grid-area: main;
-    background-color: #EEE;  /* very pale grey */
+    background-color: #a6ddcf;  /* very pale grey */
     border: solid 1px #CCC;
 }
 
@@ -72,10 +68,8 @@ body {
     padding: 20px;
 }
 
+/*  #### Grid for Navigation area page #### */
 
-/* navigation grid setup -- */
-
-/* ---- Grid for links --- */
 .linkwrapper {
     display: grid;
     grid-template-columns: 3fr 2fr 1fr;
@@ -100,35 +94,74 @@ body {
     text-align: center;
 }
 
-/* -000- End of area styling -000- */
+/* Make navigation responsive... */
 
-h1, h2, h3, h4 {
-    font-family: 'Ubuntu', sans-serif;
+@media only screen and (max-width: 800px) {
+    .linkwrapper{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "commonsearches commonsearches"
+        "topsearch topadmin"
+        ;
+    }
+    
+    .commonsearches {
+        text-align: left;
+    }
+    
+    .topsearch {
+        text-align: left;
+    }
+    
+    .topadmin {
+        text-align: right;
+    }
+    
 }
 
+/* ### Additional div styling (put colours / corners here) */
+
+
+/* Area colouring... */
+
+/* logo, banner and footer background are the same */
+.banner, .footer {
+     background-color: #888; /* dark grey */
+}
+
+/* Set font on dark areas to white */
+.banner, .side, .footer {
+    color: #fff;
+}
+
+/* #### Links Styling  #### */
+
 /* Navigation Links */
-.nav a {font-weight: bold;}
-.nav a:link, .nav a:visited {color: #AA0000;} /*dark red */
-.nav a:hover {color: #604830; text-decoration: none;} /* chocolate brown */
+a.topnav {font-weight: bold;}
+a.topnav:link, a.topnav:visited {color: #007c72;} /*dark teal */
+a.topnav:hover {color: #707a00; text-decoration: none;} 
 
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #AA0000;} /*dark_red */
-a:visited{color: #111177;} /* dark blue */
-a:hover{color: #000;}    /* Black*/
+a:link{color: #007c72;} /* dark teal */
+a:visited{color: #222;} /* dark grey */
+a:hover{color: #707a00;}    /* Dark Green*/
 
+/* #### Headings / text styling #### */
+h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+}
 
-
-/* Sub Heading Formatting */
 .sub_heading {
     font-family: 'Ubuntu', sans-serif;
     color: #593849; /* purple */
     font-weight: bold;
 }
 
+/* ### Form / Search  Styling #### */
 
-/* Top Search Bar */
 form {
     width: 100%;
 }
@@ -177,18 +210,4 @@ input {
     border-radius: 5px 0 0 5px; 
     display: inline-block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
