@@ -19,7 +19,7 @@
                 <div class="topsearch">
                     
                     <!-- Quick Search -->           
-                    <form method="post" action="quick_search.php" enctype="multipart/form-data">
+                    <form method="post" action="index.php?page=quick_search" enctype="multipart/form-data">
 
                         <input class="search quicksearch" type="text" name="quick_search" size="40" value="" required placeholder="Quick Search..." />
 

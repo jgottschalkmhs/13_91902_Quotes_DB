@@ -239,7 +239,13 @@ input {
     
 }
 
-
+.error {
+    background-color: #ffcece;
+    color: #721a1a;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 1px #721a1a;
+}
 
 
 
