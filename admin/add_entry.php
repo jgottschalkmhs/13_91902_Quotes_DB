@@ -54,6 +54,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $tag_1_field = "tag-error";
         }
     
+    if($has_errors != "yes") {
+    
+    // Get subject ID's via get_ID function...
+    $subjectID_1 = get_ID($dbconnect, 'subject', 'Subject_ID', 'Subject', $tag_1);
+    $subjectID_2 = get_ID($dbconnect, 'subject', 'Subject_ID', 'Subject', $tag_2);
+    $subjectID_3 = get_ID($dbconnect, 'subject', 'Subject_ID', 'Subject', $tag_3);
+    
+    // add entry to database
+    $addentry_sql = "INSERT INTO `quotes` (`ID`, `Author_ID`, `Quote`, `Notes`, `Subject1_ID`, `Subject2_ID`, `Subject3_ID`) VALUES (NULL, '$author_ID', '$quote', '$notes', '$subjectID_1', '$subjectID_2', '$subjectID_3');";
+    $addentry_query = mysqli_query($dbconnect, $addentry_sql); 
+        
+    // get quote ID for next page
+    $get_quote_sql = "SELECT * FROM `quotes` WHERE `Quote` = '$quote'";
+    $get_quote_query = mysqli_query($dbconnect, $get_quote_sql);
+    $get_quote_rs = mysqli_fetch_assoc($get_quote_query);
+        
+    $quote_ID = $get_quote_rs['ID'];
+    $_SESSION['Quote_Success']=$quote_ID;    
+    
+    // Go to success page...
+    header('Location: index.php?page=quote_success');
+        
+    }   // end add entry to database if
     
 
 } // end submit button if
