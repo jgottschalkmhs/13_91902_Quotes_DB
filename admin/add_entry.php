@@ -279,13 +279,13 @@ else {
     </div>
     
     <div class="autocomplete ">
-        <input class="<?php echo $country_1_field; ?>" id="country1" type="text" name="country1" value="<?php echo $country_1; ?>" placeholder="Country 1 (Start Typing)...">
+        <input class="add-field <?php echo $country_1_field; ?>" id="country1" type="text" name="country1" value="<?php echo $country_1; ?>" placeholder="Country 1 (Start Typing)...">
     </div>
     
     <br/><br />
     
     <div class="autocomplete">
-        <input id="country2" type="text" name="country2" value="<?php echo $country_2; ?>" placeholder="Country 2 (Start Typing)...">
+        <input class="add-field" id="country2" type="text" name="country2" value="<?php echo $country_2; ?>" placeholder="Country 2 (Start Typing)...">
     </div>
     
     <br /><br />
@@ -295,13 +295,13 @@ else {
     </div>
     
     <div class="autocomplete">
-        <input class="<?php echo $occupation_1_field; ?>" id="occupation1" type="text" name="occupation1" value="<?php echo $occupation_1; ?>" placeholder="Occupation 1 (Required, Start Typing)...">
+        <input class="add-field <?php echo $occupation_1_field; ?>" id="occupation1" type="text" name="occupation1" value="<?php echo $occupation_1; ?>" placeholder="Occupation 1 (Required, Start Typing)...">
     </div>
     
     <br/><br />
     
     <div class="autocomplete">
-        <input id="occupation2" type="text" name="occupation2"  value="<?php echo $country_2; ?>"placeholder="Occupation 2 (Start Typing)...">
+        <input class="add-field" id="occupation2" type="text" name="occupation2"  value="<?php echo $country_2; ?>"placeholder="Occupation 2 (Start Typing)...">
     </div>
     
     <br/><br />
@@ -329,26 +329,26 @@ else {
     </div>
     
     <div class="autocomplete">
-        <input class="<?php echo $tag_1_field; ?>" id="subject1" type="text" name="Subject_1" value="<?php echo $tag_1; ?>" placeholder="Subject 1(Start Typing)...">
+        <input class="add-field <?php echo $tag_1_field; ?>" id="subject1" type="text" name="Subject_1" value="<?php echo $tag_1; ?>" placeholder="Subject 1(Start Typing)...">
     </div>
     
     <br/><br />
     
     <div class="autocomplete">
-        <input id="subject2" type="text" name="Subject_2" value="<?php echo $tag_2; ?>" placeholder="Subject 2 (Start Typing, optional)...">
+        <input class="add-field " id="subject2" type="text" name="Subject_2" value="<?php echo $tag_2; ?>" placeholder="Subject 2 (Start Typing, optional)...">
     </div>
     
     <br/><br />
     
     <div class="autocomplete">
-        <input id="subject3" type="text" name="Subject_3" value="<?php echo $tag_3; ?>"placeholder="Subject 3 (Start Typing, optional)...">
+        <input class="add-field " id="subject3" type="text" name="Subject_3" value="<?php echo $tag_3; ?>"placeholder="Subject 3 (Start Typing, optional)...">
     </div>
     
     <br/><br />
     
     <!-- Submit Button -->
     <p>
-        <input type="submit" value="Submit" />
+        <input class="add-field" type="submit" value="Submit" />
     </p>
     
     

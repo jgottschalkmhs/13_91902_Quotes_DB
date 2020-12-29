@@ -168,7 +168,7 @@ form {
 
 .search {
     background:#fff;
-    width: 75%;
+    width: 200px;
 }
 
 .submit::-moz-focus-inner { 
@@ -203,7 +203,6 @@ input {
     display: inline-block;
     border: 1px solid #000;
     box-sizing: border-box; 
-    width:  95%;
 }
 
 input.short {
@@ -296,16 +295,18 @@ textarea,
 input[type=text] {
     font-family: 'Lato', sans-serif;
     padding: 10px;
+    border-width: 1px;
+    margin: auto;
 }
 
-textarea {
+
+.add-field {
     width: 90%;
-    max-width: 700px;
-    
+
 }
 
 .gender {
-    width: 95%;
+    width: 90%;
 }
 
 
