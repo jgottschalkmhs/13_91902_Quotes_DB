@@ -251,6 +251,12 @@ input.short {
     border: solid 1px #721a1a;
 }
 
+/* editing tools formatting */
+.edit-tools {
+    text-align: right;
+    padding-right: 20px;
+}
+
 /* Form Formatting css */
 
 /* make height of drop downs slightly larger */

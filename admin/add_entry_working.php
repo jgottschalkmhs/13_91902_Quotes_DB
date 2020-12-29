@@ -364,25 +364,13 @@ autocomplete(document.getElementById("subject1"), all_tags);
 autocomplete(document.getElementById("subject2"), all_tags);
 autocomplete(document.getElementById("subject3"), all_tags);
     
-<?php 
-    
-    if ($author_ID=="unknown") {
-    
-    ?>
-    
-    
-    var all_countries = <?php print("$all_countries"); ?>;
-    autocomplete(document.getElementById("country1"), all_countries);
-    autocomplete(document.getElementById("country2"), all_countries);
+var all_countries = <?php print("$all_countries"); ?>;
+autocomplete(document.getElementById("country1"), all_countries);
+autocomplete(document.getElementById("country2"), all_countries);
 
-    var all_occupations = <?php print("$all_occupations"); ?>;
-    autocomplete(document.getElementById("occupation1"), all_occupations);
-    autocomplete(document.getElementById("occupation2"), all_occupations);
-    
-    <?php
-        } // end author unknown if
-    
-        ?>
+var all_occupations = <?php print("$all_occupations"); ?>;
+autocomplete(document.getElementById("occupation1"), all_occupations);
+autocomplete(document.getElementById("occupation2"), all_occupations);
     
 </script>    
 

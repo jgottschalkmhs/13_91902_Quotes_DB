@@ -42,7 +42,7 @@ if($count > 0) {
 // Loop through results and dislay them...
 do {
     
-    $quote = preg_replace('/[^A-Za-z0-9.,\s\'\-]/', ' ', $find_rs['Quote']);
+    $quote = preg_replace('/[^A-Za-z0-9.?,\s\'\-]/', ' ', $find_rs['Quote']);
     
     // get author name
     include("get_author.php");
