@@ -98,7 +98,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // check year of birth is a string (numbers only, 1-4 characters long)
         
-        if($yob=="") {
+        $valid_yob = isValidYear($yob);
+        echo "<br />Valid year?".$valid_yob;
+        
+        if($yob < 0 || $valid_yob != 1 || !preg_match('/^\d{1,4}$/', $yob)) {
         $has_errors = "yes";
         $yob_error = "error-text";
         $yob_field = "form-error";    
