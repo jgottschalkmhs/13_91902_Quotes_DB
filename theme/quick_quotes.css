@@ -160,10 +160,9 @@ h1, h2, h3, h4 {
     font-weight: bold;
 }
 
-hr {
-    width: 95%;
+p {
+    width: 90%;
 }
-
 
 /* ### Form / Search  Styling #### */
 
