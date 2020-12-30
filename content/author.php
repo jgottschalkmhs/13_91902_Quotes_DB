@@ -5,6 +5,7 @@ if(!isset($_REQUEST['authorID']))
     header('Location: index.php');
 }
 
+// Get Author details from author table
 $author_to_find = $_REQUEST['authorID'];
 
 $find_sql = "SELECT * FROM `author`
@@ -56,7 +57,7 @@ include("get_author.php");
     
     <div class="edit-tools">
         
-    <a href="index.php?page=../admin/editauthor&ID=<?php echo $find_rs['Author_ID']; ?>" title="Edit author"><i class="fa fa-edit fa-2x"></i></a>
+    <a href="index.php?page=../admin/editauthor&authorID=<?php echo $find_rs['Author_ID']; ?>" title="Edit author"><i class="fa fa-edit fa-2x"></i></a>
 
     &nbsp; &nbsp;
         
@@ -95,7 +96,7 @@ $count = mysqli_num_rows($find_quotes_query);
 // Loop through results and dislay them...
 do {
     
-    $quote = preg_replace('/[^A-Za-z0-9.,\s\'\-]/', ' ', $find_rs['Quote']);
+    $quote = preg_replace('/[^A-Za-z0-9.?,\s\'\-]/', ' ', $find_rs['Quote']);
 
     
     ?>
