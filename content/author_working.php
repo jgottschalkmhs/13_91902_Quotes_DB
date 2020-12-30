@@ -7,8 +7,8 @@ if(!isset($_REQUEST['authorID']))
 
 $author_to_find = $_REQUEST['authorID'];
 
-$find_sql = "SELECT * FROM `author`
-WHERE `Author_ID` = $author_to_find
+$find_sql = "SELECT * FROM `quotes`
+JOIN author ON (`author`.`Author_ID` = `quotes`.`Author_ID`) WHERE `quotes`.`Author_ID` = $author_to_find
 ";
 $find_query = mysqli_query($dbconnect, $find_sql);
 $find_rs = mysqli_fetch_assoc($find_query);
@@ -53,23 +53,7 @@ include("get_author.php");
 <br />
 
 <?php
-    
-// see if there are any quotes...
-$find_quotes_sql = "SELECT * FROM `quotes` WHERE `Author_ID` = $author_to_find";
-$find_quotes_query = mysqli_query($dbconnect, $find_quotes_sql);
-$find_quotes_rs = mysqli_fetch_assoc($find_quotes_query);
-        
-$count = mysqli_num_rows($find_quotes_query);
 
-        
-    if($count > 0) {
-        // find quotes if they exist...
-    $find_sql = "SELECT * FROM `quotes`
-    JOIN author ON (`author`.`Author_ID` = `quotes`.`Author_ID`) WHERE `quotes`.`Author_ID` = $author_to_find
-    ";
-    $find_query = mysqli_query($dbconnect, $find_sql);
-    $find_rs = mysqli_fetch_assoc($find_query);
-        
 // Loop through results and dislay them...
 do {
     
@@ -95,9 +79,6 @@ do {
     
 }   // end of display results 'do'
 
-while($find_rs = mysqli_fetch_assoc($find_query));
-        
-        }   // end find quotes if
-        
-            
-    ?>
+while($find_rs = mysqli_fetch_assoc($find_query))
+
+?>
