@@ -18,7 +18,7 @@ if(password_verify($_REQUEST['password'] ,$login_rs['password'])) {
     // password matches
     echo 'Password is valid!';
     $_SESSION['admin']=$login_rs['username'];
-    header("Location: index.php?page=../admin/new_quote");
+    header("Location: index.php?page=../admin/admin_panel");
     
 }   // end valid password if
 
