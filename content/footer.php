@@ -1,3 +1,3 @@
     <div class="box footer">
-        CC yourname 20XX
+        Miss Gottschalk 2020
     </div>    <!-- / footer -->
