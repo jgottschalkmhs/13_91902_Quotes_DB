@@ -4,8 +4,7 @@
 if (isset($_SESSION['admin'])) {
     
     $author_ID = $_SESSION['Add_Quote'];
-    echo "AuthorID: ".$author_ID;
-    
+        
     if($author_ID=="unknown") {
         
     // get country & occupation lists from database
@@ -94,6 +93,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $has_errors = "yes";
         $last_error = "error-text";
         $last_field = "form-error";
+        }
+        
+        // if gender is not chosen...
+        if ($gender == "") {
+            $has_errors = "yes";
+            $gender_error = "error-text";
+            $gender_field = "form-error";
         }
         
         // check year of birth is valid
@@ -237,6 +243,9 @@ else {
             
     <br /><br />
     
+    <div class="<?php echo $gender_error; ?>">
+        Please choose a gender...
+    </div>
     <select class="adv gender <?php echo $gender_field; ?>" name="gender">
         
         <?php
