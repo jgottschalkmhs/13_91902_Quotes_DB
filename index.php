@@ -9,6 +9,9 @@ include("functions.php");
 // Connect to database...
 $dbconnect=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 
+// needed so that on display page, author name will appear.
+$author_page = "no";
+
 if(mysqli_connect_errno()) {
 	echo "Connection failed:".mysqli_connect_error();
 	exit;
